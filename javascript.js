@@ -25,9 +25,18 @@ function singleRound(playerSelection, computerSelection) {
 }
 
 function game(){
-    for (let i = 0; i<5; i++){
+    for (let i = 0; i<5; ){
         singleRound()
         console.log("You win "+win+" times and computer win "+lose+" times")
+        i=win+lose
+        console.log(i)
+    }
+    if(win>lose){
+        alert ("you win this game!")
+    }else if(win<lose){
+        alert ("you lost try again next time")
+    }else{
+        alert("its a draw")
     }
     win=0;
     lose=0;
